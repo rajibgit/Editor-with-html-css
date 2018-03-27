@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.main{
+			width: 500px;
+			height: 400px;
+			border: 1px solid #000;
+			margin: 0 auto;
+		}
+		.content{
+			width: auto;
+			height: 340px;
+			border: 1px solid red;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="menubar">
+			<table>
+				<tr>
+					<td><button type="button" onclick="execCmd('bold')"><i class="fa fa-bold"></i></button></td>
+					<td><button type="button" onclick="execCmd('italic')"><i class="fa fa-italic"></i></button></td>
+					<td><button type="button" onclick="execCmd('underline')"><i class="fa fa-underline"></i></button></td>
+					<td><button type="button" onclick="execCmd('strikethrough')"><i class="fa fa-strikethrough"></i></button></td>
+					
+                    <td><button type="button" onclick="execCmd('link')"><i class="fa fa-link"></i></button></td>
+					
+					<td><button type="button" onclick="execCmd('strikethrough')"><i class="fa fa-align-left"></i></button></td>
+					<td><button type="button" onclick="execCmd('strikethrough')"><i class="fa fa-align-right"></i></button></td>
+					<td><button type="button" onclick="execCmd('strikethrough')"><i class="fa fa-center"></i></button></td>
+					<td><button type="button" onclick="execCmd('strikethrough')"><i class="fa fa-justify"></i></button></td>
+					<td><button type="button" onclick="execCmd('strikethrough')"><i class="fa fa-cut"></i></button></td>
+					
+                    <td><button type="button" onclick="execCmd('strikethrough')"><i class="fa fa-copy"></i></button></td>
+					
+					<td><button type="button" onclick="execCmd('strikethrough')"><i class="fa fa-paste"></i></button></td>
+					<td><button type="button" onclick="execCmd('strikethrough')"><i class="fa fa-undo"></i></button></td>
+					<td><button type="button" onclick="execCmd('strikethrough')"><i class="fa fa-paragraph"></i></button></td>
+			        <select>
+					<option value="H1">H1</option
+					<option value="H2">H2</option
+					<option value="H3">H3</option
+					<option value="H4">H4</option
+					<option value="H5">H5</option
+					<option value="H6">H6</option
+					</select>
+				</tr>
+			</table>
+			<hr>
+			<div class="content" contenteditable="true"></div>
+		</div>
+	</div>
+	<script>
+		function execCmd(command){
+			document.execCommand(command, false, null);
+		}
+	</script>
+</body>
+</html>
